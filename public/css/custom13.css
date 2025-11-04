@@ -1,0 +1,219 @@
+/* Contenedor principal */
+
+/* Navbar verde lima full-width */
+.navbar-verde {
+    width: 100vw;
+    background: rgba(124, 231, 132, 0.95); /* verde lima translúcido */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    border-radius: 0; /* full-width */
+    padding: 0.5rem 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Logo */
+.navbar-logo {
+    height: 50px;
+    transition: transform 0.4s ease;
+}
+.navbar-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Links */
+.nav-link {
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #e0ff00; /* verde lima brillante al pasar */
+}
+
+/* Subrayado animado */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #bfff00;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Botón registro */
+.btn-register {
+    padding: 0.45rem 1.5rem;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #7ce784, #1b5e20);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 20px rgba(27,94,32,0.35);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-register::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.15);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+}
+
+.btn-register:hover::before {
+    top: -25%;
+    left: -25%;
+    opacity: 1;
+}
+
+.btn-register:hover {
+    background: linear-gradient(135deg, #1b5e20, #7ce784);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(27,94,32,0.5);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    background-color: #7ce784;
+    border: none;
+}
+
+.dropdown-item {
+    color: #fff;
+}
+
+.dropdown-item:hover {
+    background-color: #bfff00;
+    color: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+/* ===== FOOTER GLASSMORPHISM ===== */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(124, 231, 128, 0.85); /* verde lima semi-transparente */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    color: var(--text-light);
+    text-align: center;
+    padding: 30px 15px;
+    font-family: 'Poppins', sans-serif;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 -8px 25px rgba(0,0,0,0.18);
+    z-index: 100;
+    border-radius: 12px 12px 0 0;
+}
+
+.footer-content h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.footer-content p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 18px;
+}
+
+/* Redes sociales con efecto neón */
+.socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.socials a svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    transition: transform 0.4s ease, fill 0.3s ease, filter 0.4s ease;
+}
+
+
+/* Iconos de redes sociales con color por defecto */
+.socials a.facebook svg { fill: #1877f2; }
+.socials a.twitter svg { fill: #1da1f2; }
+.socials a.instagram svg { fill: #e1306c; }
+.socials a.linkedin svg { fill: #0a66c2; }
+.socials a.github svg { fill: #333; }
+.socials a.whatsapp svg { fill: #25D366; }
+.socials a svg {
+    fill: rgba(124, 231, 132, 0.6); /* Verde lima translúcido */
+}
+
+.socials a:hover svg {
+    fill: rgba(124, 231, 132, 0.95);
+    filter: drop-shadow(0 0 8px rgba(124, 231, 132, 0.8));
+}
+
+.socials a {
+    background: rgba(124, 231, 132, 0.1);
+}
+
+.socials a:hover {
+    background: rgba(124, 231, 132, 0.25);
+}
+
+
+/* Hover: escalar y sombra para efecto llamativo */
+.socials a:hover {
+    transform: scale(var(--social-hover-scale)) rotate(-10deg);
+    filter: drop-shadow(0 0 12px rgba(255,255,255,0.7));
+}
+
+
+/* Colores sociales */
+.socials a.facebook:hover { background-color: #1877f2; }
+.socials a.twitter:hover { background-color: #1da1f2; }
+.socials a.instagram:hover { background-color: #e1306c; }
+.socials a.linkedin:hover { background-color: #0a66c2; }
+.socials a.github:hover { background-color: #333; }
+.socials a.whatsapp:hover { background-color: #25D366; }
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.25);
+    margin-top: 18px;
+    padding-top: 10px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .navbar-logo { width: 36px; height: auto; }
+    .navbar .btn { width: 100%; margin-top: 0.6rem; }
+    .footer { padding: 25px 10px; }
+    .socials a { width: 36px; height: 36px; }
+    .socials a svg { width: 18px; height: 18px; }
+}

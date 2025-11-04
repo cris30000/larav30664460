@@ -1,0 +1,250 @@
+/* ===== VARIABLES DE COLORES ===== */
+:root {
+    --primary-green: #7be780;
+    --accent-green: #95b497;
+    --hover-green: #1B5E20;
+    --light-green: #E8F5E9;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --text-light: #ffffff;
+    --text-dark: #222;
+    --social-hover-scale: 1.3;
+}
+
+/* ===== NAVBAR GLASSMORPHISM ===== */
+.custom-navbar {
+    padding: 0.6rem 1rem;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    background: var(--glass-bg);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    min-height: 70px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar-logo {
+    width: 5cm;
+    height: auto;
+    object-fit: contain;
+    margin-right: 12px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.15) rotate(-8deg);
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.25));
+}
+
+.navbar .nav-link {
+    color: var(--text-light);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.4s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
+    color: var(--text-light) !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transform: translateY(-2px);
+}
+
+/* Botones con efecto glass */
+.navbar .btn-outline-success {
+    color: var(--text-light);
+    border: 2px solid rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.05);
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+    transition: all 0.4s ease;
+}
+.InfoHeader h1 {
+    
+    font-size: 1rem;
+    color: white;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    
+}
+
+.navbar .btn-outline-success:hover {
+    background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
+    border-color: rgba(255,255,255,0.6);
+    color: var(--text-light);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.navbar .form-control {
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.05);
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    height: 36px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.navbar .form-control:focus {
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 0 15px rgba(129,199,132,0.4);
+    outline: none;
+}
+
+/* Dropdown moderno */
+.navbar .dropdown-menu {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.navbar .dropdown-item {
+    color: var(--text-light);
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.navbar .dropdown-item:hover {
+    background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
+    color: var(--text-light);
+}
+/* Enlaces de navbar visibles siempre */
+.navbar .nav-link {
+    color: #ffffff !important; /* blanco sólido */
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.4s ease;
+}
+
+/* Hover y activo */
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
+    color: #ffffff !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transform: translateY(-2px);
+}
+
+/* Botones */
+.navbar .btn-outline-success {
+    color: #ffffff; /* blanco sólido */
+    border: 2px solid rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.05);
+}
+
+.navbar .btn-outline-success:hover {
+    background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
+    color: #ffffff;
+}
+.custom-navbar {
+    background: rgba(27, 94, 32, 0.85); /* verde oscuro semi-transparente */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 12px;
+}
+
+/* ===== FOOTER GLASSMORPHISM ===== */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(124, 231, 128, 0.85); /* verde lima semi-transparente */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    color: var(--text-light);
+    text-align: center;
+    padding: 30px 15px;
+    font-family: 'Poppins', sans-serif;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 -8px 25px rgba(0,0,0,0.18);
+    z-index: 100;
+    border-radius: 12px 12px 0 0;
+}
+
+.footer-content h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.footer-content p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 18px;
+}
+
+/* Redes sociales con efecto neón */
+.socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.socials a svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    transition: transform 0.4s ease, fill 0.3s ease, filter 0.4s ease;
+}
+
+
+/* Iconos de redes sociales con color por defecto */
+.socials a.facebook svg { fill: #1877f2; }
+.socials a.twitter svg { fill: #1da1f2; }
+.socials a.instagram svg { fill: #e1306c; }
+.socials a.linkedin svg { fill: #0a66c2; }
+.socials a.github svg { fill: #333; }
+.socials a.whatsapp svg { fill: #25D366; }
+
+/* Hover: escalar y sombra para efecto llamativo */
+.socials a:hover {
+    transform: scale(var(--social-hover-scale)) rotate(-10deg);
+    filter: drop-shadow(0 0 12px rgba(255,255,255,0.7));
+}
+
+
+/* Colores sociales */
+.socials a.facebook:hover { background-color: #1877f2; }
+.socials a.twitter:hover { background-color: #1da1f2; }
+.socials a.instagram:hover { background-color: #e1306c; }
+.socials a.linkedin:hover { background-color: #0a66c2; }
+.socials a.github:hover { background-color: #333; }
+.socials a.whatsapp:hover { background-color: #25D366; }
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.25);
+    margin-top: 18px;
+    padding-top: 10px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .navbar-logo { width: 36px; height: auto; }
+    .navbar .btn { width: 100%; margin-top: 0.6rem; }
+    .footer { padding: 25px 10px; }
+    .socials a { width: 36px; height: 36px; }
+    .socials a svg { width: 18px; height: 18px; }
+}
